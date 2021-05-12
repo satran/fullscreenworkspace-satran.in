@@ -2,7 +2,7 @@
     "description": "When you launch an application in fullscreen mode move it to a separate workspace.",
     "name": "Fullscreen On New Workspace",
     "shell-version": [
-        "3.30.1"
+        "40"
     ],
     "uuid": "fullscreenworkspace@satran.in"
 }
