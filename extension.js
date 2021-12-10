@@ -25,8 +25,11 @@ function unmaximize(act){
     let previous = _previousWorkspace[win.toString()];
     if (previous == null || previous == undefined)
 	return;
+    delete _previousWorkspace[win.toString()];
     win.change_workspace_by_index(previous, 1);
+    let fullScreenWorkspace = global.workspace_manager.get_active_workspace();
     global.workspace_manager.get_workspace_by_index(previous).activate(global.get_current_time());
+    global.workspaceManager.remove_workspace(fullScreenWorkspace);
 }
 
 function enable() {
@@ -34,6 +37,11 @@ function enable() {
 	if (change === Meta.SizeChange.FULLSCREEN) maximize(act);
 	if (change === Meta.SizeChange.UNFULLSCREEN) unmaximize(act);
     }));
+
+    _handles.push(global.window_manager.connect('destroy', (_, act, change) => {
+	unmaximize(act)
+    }));
+
 }
 
 function disable() {
