@@ -9,5 +9,5 @@ gnome-shell-extension-tool -e fullscreenworkspace@satran.in
 ```
 
 # Caveats
-- I have only tested it with GNOME 3.30.1
+* The latest version I have only GNOME 41, I'm not sure if this works with older systems.
 - Works best with a single monitor, it does work with multiple monitors but is a bit wonky.

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist>
+  <schema id="org.gnome.shell.extensions.fullscreenworkspace" path="/org/gnome/shell/extensions/fullscreenworkspace/">
+    <key name="maximized-windows" type="b">
+      <default>false</default>
+    </key>
+  </schema>
+</schemalist>

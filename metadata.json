@@ -1,11 +1,11 @@
 {
-    "description": "When you launch an application in fullscreen mode move it to a separate workspace.",
+    "description": "Move window to a new workspace when you maximize or make it fullscreen.",
     "name": "Fullscreen On New Workspace",
     "shell-version": ["3.38", "40", "41"],
     "uuid": "fullscreenworkspace@satran.in",
     "gettext-domain": "fullscreenworkspace",
     "schema-id": "org.gnome.shell.extensions.fullscreenworkspace",
     "url": "https://github.com/satran/fullscreenworkspace-satran.in",
-    "version": 2.1
+    "version": 5
 }
 
