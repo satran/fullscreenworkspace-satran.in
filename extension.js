@@ -47,7 +47,10 @@ class Extension {
 		log(`enabling ${Me.metadata.name}`);
 		this.settings = ExtensionUtils.getSettings('org.gnome.shell.extensions.fullscreenworkspace');
 
-		this._handles.push(global.window_manager.connect('size-change', (_, act, change) => {
+		this._handles.push(global.window_manager.connect('size-change', (_, act, change, from, to) => {
+			let dis = global.get_display();
+			if (dis.get_primary_monitor() != dis.get_monitor_index_for_rect(to)) return;
+
 			if (this.settings.get_boolean('maximized-windows')) {
 				if (change === Meta.SizeChange.MAXIMIZE) this.maximize(act);
 				if (change === Meta.SizeChange.UNMAXIMIZE) this.unmaximize(act);
