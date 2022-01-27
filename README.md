@@ -10,4 +10,4 @@ gnome-shell-extension-tool -e fullscreenworkspace@satran.in
 
 # Caveats
 * The latest version I have only GNOME 41, I'm not sure if this works with older systems.
-- Works best with a single monitor, it does work with multiple monitors but is a bit wonky.
+- Works best with a single monitor. When used with multiple monitors, workspaces are not affected if maximized/restored windows are on secondary displays.
