@@ -65,8 +65,6 @@ class Extension {
 	}
 
 	disable() {
-		this._indicator.destroy();
-		this._indicator = null;
 		this._handles.splice(0).forEach(h => global.window_manager.disconnect(h));
 	}
 }

@@ -6,6 +6,6 @@
     "gettext-domain": "fullscreenworkspace",
     "schema-id": "org.gnome.shell.extensions.fullscreenworkspace",
     "url": "https://github.com/satran/fullscreenworkspace-satran.in",
-    "version": 5
+    "version": 6
 }
 
