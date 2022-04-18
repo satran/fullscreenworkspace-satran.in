@@ -1,7 +1,7 @@
 {
     "description": "Move window to a new workspace when you maximize or make it fullscreen.",
     "name": "Fullscreen On New Workspace",
-    "shell-version": ["3.38", "40", "41"],
+    "shell-version": ["3.38", "40", "41", "42"],
     "uuid": "fullscreenworkspace@satran.in",
     "gettext-domain": "fullscreenworkspace",
     "schema-id": "org.gnome.shell.extensions.fullscreenworkspace",
