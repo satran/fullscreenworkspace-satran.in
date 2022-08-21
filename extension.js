@@ -40,7 +40,7 @@ class Extension {
 		win.change_workspace_by_index(previous, 1);
 		let fullScreenWorkspace = global.workspace_manager.get_active_workspace();
 		global.workspace_manager.get_workspace_by_index(previous).activate(global.get_current_time());
-		global.workspaceManager.remove_workspace(fullScreenWorkspace);
+		global.workspaceManager.remove_workspace(fullScreenWorkspace, global.get_current_time());
 	}
 
 	enable() {
@@ -50,9 +50,9 @@ class Extension {
 		this._handles.push(global.window_manager.connect('size-change', (_, act, change, from, to) => {
 			let dis = global.get_display();
 			if (dis.get_primary_monitor() != dis.get_monitor_index_for_rect(to)) return;
-
+			
 			if (this.settings.get_boolean('maximized-windows')) {
-				if (change === Meta.SizeChange.MAXIMIZE) this.maximize(act);
+				if (act.get_meta_window().get_maximized() === Meta.MaximizeFlags.BOTH) this.maximize(act);
 				if (change === Meta.SizeChange.UNMAXIMIZE) this.unmaximize(act);
 			}
 			if (change === Meta.SizeChange.FULLSCREEN) this.maximize(act);
