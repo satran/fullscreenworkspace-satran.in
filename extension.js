@@ -52,6 +52,8 @@ export default class PlainExampleExtension extends Extension {
 	}
 
 	enable() {
+		this._handles = [];
+		this._previousWorkspace = {};
 		console.log(`enabling ${this.metadata.name}`);
 		this.settings = this.getSettings('org.gnome.shell.extensions.fullscreenworkspace');
 
